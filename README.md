@@ -18,9 +18,6 @@ function webs
   fi  
 }  
 ```
-
-* You can add the file _webs_ to your bash_completion.d folder (/etc/bash_completion.d) for commands autocompletion
-
 **IMPORTANT**
 This script must be placed before these lines if you use the auto-completion:
 
@@ -33,6 +30,10 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 ```
+
+* You can add the file _webs_ to your bash_completion.d folder (/etc/bash_completion.d) for commands autocompletion
+
+
 
 ## Example
 
