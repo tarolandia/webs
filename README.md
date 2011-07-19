@@ -1,4 +1,4 @@
-# webs - Shorhand for apache2 service
+# webs - Shorthand for apache2 service
 
 ## Description
 
