@@ -33,7 +33,27 @@ fi
 
 * You can add the file _webs_ to your bash_completion.d folder (/etc/bash_completion.d) for commands autocompletion
 
+```bash
+#! /bin/bash
+_webs()
+{
+    local cur prev opts
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
 
+    opts="start stop restart reload force-reload start-htcacheclean stop-htcacheclean status"
+    
+    if [[ -z "${cur}"  ]] ; then
+       COMPREPLY=( $opts )
+       return 0
+    else
+       COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+       return 0
+    fi
+}
+complete -F _webs webs
+```
 
 ## Example
 
