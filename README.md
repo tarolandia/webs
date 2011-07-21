@@ -10,8 +10,9 @@ _File: webs.bashrc_
 #! /bin/bash
 function webs 
 {
+  PARS=" start stop restart reload force-reload start-htcacheclean stop-htcacheclean status "
   if [ -z "$1" ]; then
-    echo "Empty params: try start|stop|restart|reload|force-reload|start-htcacheclean|stop-htcacheclean|status"
+    echo "Empty params: try $PARS"  
     return 0
   else
     REGEX="\s$1\s"
